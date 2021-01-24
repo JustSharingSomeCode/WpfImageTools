@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
@@ -135,5 +136,10 @@ namespace WpfImageTools
                 return null;
             }
         }        
+
+        public static CroppedBitmap CutBitmap(BitmapSource source, Int32Rect rect)
+        {
+            return new CroppedBitmap(source, rect);
+        }
     }
 }
